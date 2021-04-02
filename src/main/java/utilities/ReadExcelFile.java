@@ -14,16 +14,16 @@ import org.testng.annotations.DataProvider;
 
 import pages.LoginPage;
 
-public class LoginDataFromExcel {
-	private static final Logger LOG = Logger.getLogger(LoginDataFromExcel.class);
+public class ReadExcelFile{
+	private static final Logger LOG = Logger.getLogger(ReadExcelFile.class);
 LoginPage l=new LoginPage();
 	
 	@DataProvider(name = "LoginData")
-	public Object[][] m1(String  filename , String sheetname) throws IOException {
+	public Object[][] m1() throws IOException {
 		Object[][] obj;
-		FileInputStream fis = new FileInputStream(filename);//"LoginCredential.xlsx");
+		FileInputStream fis = new FileInputStream("LoginCredential.xlsx");
 		XSSFWorkbook wbk = new XSSFWorkbook(fis);
-		Sheet s = wbk.getSheet(sheetname);//"teststeps");
+		Sheet s = wbk.getSheet("teststeps");
 		obj = new Object[s.getLastRowNum()][2];
 		int lastRow = s.getLastRowNum();
 		for (int i = 1; i <= lastRow; i++) {
