@@ -17,10 +17,11 @@ public class ReadExcelFile {
 	@DataProvider(name = "LoginData")
 	public static Object[][] excelReader() {
 		Object[][] obj = null ;
+		String path = System.getProperty("user.dir");
 		FileInputStream fs = null ;
 		try {
 			//fs= new FileInputStream("TestData\\amazonTestData.xlsx");
-			fs = new FileInputStream("D:\\Downloads for selenium\\ijmeetAR1\\IJMeetRepo\\src\\main\\resources\\LoginCredential.xlsx");
+			fs = new FileInputStream(path+"\\src\\main\\resources\\LoginCredential.xlsx");
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
