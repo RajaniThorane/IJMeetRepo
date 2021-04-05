@@ -1,11 +1,10 @@
-package com.stepdefination;
+package testcases;
 
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 
-import com.Pages.SceduleMeetingPage;
-import com.basesetup.BaseClass;
-
+import basesetup.BaseClass;
+import pages.SceduleMeetingPage;
 import sun.rmi.runtime.Log;
 
 public class SceduleMeetingTest extends BaseClass {

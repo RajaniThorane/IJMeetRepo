@@ -14,7 +14,7 @@ import org.openqa.selenium.opera.OperaDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.Config_properties;
-import utilities.Constance;
+import utilities.Constants;
 
 public class UIKeywords {
 	 private Config_properties con = new Config_properties();
@@ -26,24 +26,24 @@ public class UIKeywords {
 		switch(browserName){
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
-			Constance.driver = new ChromeDriver();
+			Constants.driver = new ChromeDriver();
 			LOG.info("ChromeBrowser Lunching Successfully. ");
 			break;
 		case "firefox":
 			WebDriverManager.firefoxdriver().setup();
-			Constance.driver=new FirefoxDriver();
+			Constants.driver=new FirefoxDriver();
 			LOG.info("FirefoxBrowser Lunching Successfully. ");
 			
 			break;
 		case "IE":
 			WebDriverManager.iedriver().setup();
-			Constance.driver=new InternetExplorerDriver();
+			Constants.driver=new InternetExplorerDriver();
 			LOG.info("IEBrowser Lunching Successfully. ");
 			
 			break;
 		case "Opera":
 			WebDriverManager.operadriver().setup();
-			Constance.driver = new OperaDriver();
+			Constants.driver = new OperaDriver();
 			LOG.info("OperaBrowser Lunching Successfully. ");
 			
 			default :
@@ -52,19 +52,19 @@ public class UIKeywords {
 		}
 	}
 	public void lunchURL() {
-		Constance.driver.get(con.getUrl());
+		Constants.driver.get(con.getUrl());
 	}
 	public void closeBrowserwindows() {
-		Constance.driver.quit();
+		Constants.driver.quit();
 	}
 	public void closebrowserwindow() {
-		Constance.driver.close();
+		Constants.driver.close();
 	}
 	public  void windowMaximise() {
-		Constance.driver.manage().window().maximize();
+		Constants.driver.manage().window().maximize();
 	}
 	public void deletecookies() {
-		Constance.driver.manage().deleteAllCookies();
+		Constants.driver.manage().deleteAllCookies();
 	}
 	public void waitFor(long time) {
 		try {
@@ -81,12 +81,12 @@ public class UIKeywords {
 	}
 	
 	public void implicitWait(int timeout ) {
-		Constance.driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
+		Constants.driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
 
 		
 	}
 	public void click(By by) {
-	Constance.driver.findElement(by).click();	
+	Constants.driver.findElement(by).click();	
 	}
 	public void click(WebElement element) {
 	 element.click();	

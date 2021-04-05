@@ -12,11 +12,11 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
-import pages.LoginPage;
+
 
 public class ReadExcelFile{
 	private static final Logger LOG = Logger.getLogger(ReadExcelFile.class);
-LoginPage l=new LoginPage();
+
 	
 	@DataProvider(name = "LoginData")
 	public Object[][] m1() throws IOException {
