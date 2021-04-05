@@ -1,4 +1,4 @@
-package testcases;
+package testcases1;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
@@ -38,9 +38,9 @@ public class SignInPageTest extends BaseClass {
 		SignInPage signin = new SignInPage();
 		WaitFor.elementToBeVisibile(signin.getsignuplink(), 30);
 		signin.clickOnsignUpLink();
-		LOG.info("Entering EmailId ");
+		LOG.info("Entering EmailId :"+emailId);
 		signin.enterEmail((String) emailId);
-		LOG.info("Entering Password");
+		LOG.info("Entering Password :"+password);
 		signin.enterPassword((String) password);
 		LOG.info("Click on Signinbutton");
 		signin.clickOnSignUpBtn();

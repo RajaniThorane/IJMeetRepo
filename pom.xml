@@ -62,6 +62,11 @@
 			<version>4.1.2</version>
 		</dependency>
 	</dependencies>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	
 	<build>
 		<plugins>
 
@@ -73,6 +78,7 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>${TestNgSuiteFile}</suiteXmlFile>
 					</suiteXmlFiles>
+					 <useSystemClassLoader>false</useSystemClassLoader>
 				</configuration>
 			</plugin>
 
