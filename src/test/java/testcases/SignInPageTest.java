@@ -1,18 +1,19 @@
-package com.stepdefination;
+package testcases;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.Pages.SignInPage;
-import com.basesetup.BaseClass;
-import com.keywords.UIKeywords;
-import com.uitilities.Constance;
 import com.uitilities.WaitFor;
 
-public class SignInPageTest extends BaseClass{
+import basesetup.BaseClass;
+import keywords.UIKeywords;
+import pages.SignInPage;
+
+public class SignInPageTest extends BaseClass {
 	private static final Logger LOG = Logger.getLogger(SignInPageTest.class);
+
 	@Test
 	public void verifyLogin() {
 		SignInPage signin = new SignInPage();
@@ -25,12 +26,11 @@ public class SignInPageTest extends BaseClass{
 		LOG.info("Click on Signinbutton");
 		signin.clickOnSignUpBtn();
 		WaitFor.elementToBeVisibile(signin.getConfirmationMessage(), 30);
-		
+
 		String actual = signin.getConfirmationMessageText();
 		Assert.assertTrue(actual.contains("Hello"));
-		LOG.info("Redirect on dashboard  and dispaly : "+actual);
-		
+		LOG.info("Redirect on dashboard  and dispaly : " + actual);
+
 	}
-	
 
 }

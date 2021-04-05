@@ -1,8 +1,8 @@
 package utilities;
 
-import java.util.Properties;
 
 import org.apache.log4j.Logger;
+
 
 import customeexceptions.InvalidEnvironementException;
 import customeexceptions.UnableToGetBrowserException;
