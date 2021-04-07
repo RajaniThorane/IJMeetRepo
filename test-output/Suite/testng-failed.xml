@@ -12,11 +12,11 @@
       </class> <!-- testcases.SceduleMeetingTest -->
       <class name="testcases.SignInPageTest">
         <methods>
-          <include name="verifyLogin"/>
+          <include name="verifySceduleMeeting"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testcases.SignInPageTest -->
+      </class> <!-- testcases.SceduleMeetingTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -98,6 +98,11 @@ public class UIKeywords {
 		element.click();
 	}
 
+
+	public void doSendKeys(WebElement element, String key) {
+		element.sendKeys(key);
+
+
 	public String verifyExpectedCurrentUrl() {
 		return con.getActualCurrentUrl();
 		
@@ -105,5 +110,6 @@ public class UIKeywords {
 
 	public String gettingCurrentUrl() {
 		return Constants.driver.getCurrentUrl();
+
 	}
 }

@@ -13,5 +13,11 @@ public class WaitFor {
 		
 		Constants.wait.until((ExpectedConditions.visibilityOf(element))); 
 		}
-
+	
+     public static  void elementLocate(WebElement element ,int timeout) {
+    	 Constants.wait =  new WebDriverWait(Constants.driver ,timeout);
+ 		
+ 		Constants.wait.until((ExpectedConditions.visibilityOfElementLocated((By) element)));
+ 		
+	}
 }

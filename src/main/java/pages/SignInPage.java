@@ -12,7 +12,7 @@ import keywords.UIKeywords;
 import utilities.Constants;
 
 public class SignInPage {
-	UIKeywords keyword = new UIKeywords();
+	private UIKeywords keyword = new UIKeywords();
 	@FindBy(xpath = "//a[text()=' Sign In ']")
 	private WebElement signinlink;
 	// By signin_link = By.cssSelector("ul[class='navbar-nav ml-auto
@@ -48,19 +48,19 @@ public class SignInPage {
 	}
 
 	public void clickOnsignUpLink() {
-		signinlink.click();
+		keyword.click(signinlink);
 	}
 
 	public void enterEmail(String emailid) {
-		email.sendKeys(emailid);
+		  keyword.doSendKeys(email,emailid);
 	}
 
 	public void enterPassword(String pswd) {
-		password.sendKeys(pswd);
+		  keyword.doSendKeys(password,pswd);
 	}
 
 	public void clickOnSignUpBtn() {
-		signinBtn.click();
+		keyword.click(signinBtn);
 	}
 
 	public WebElement getConfirmationMessage() {
