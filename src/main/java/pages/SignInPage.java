@@ -15,7 +15,8 @@ public class SignInPage {
 	private UIKeywords keyword = new UIKeywords();
 	@FindBy(xpath = "//a[text()=' Sign In ']")
 	private WebElement signinlink;
-	By signin_link = By.cssSelector("ul[class='navbar-nav ml-auto customize-right-navbar'] :nth-child(4) a");
+	// By signin_link = By.cssSelector("ul[class='navbar-nav ml-auto
+	// customize-right-navbar'] :nth-child(4) a");
 
 	private WebElement email;
 	private WebElement password;
@@ -24,6 +25,19 @@ public class SignInPage {
 
 	@FindBy(css = "div[class='shedule-meeting-hello-views'] h3")
 	private WebElement confirmationMessage;
+
+	// private By signinlink = By.xpath("//a[text()=' Sign In ']");
+	@FindBy(css = "span[class='invalid-feedback']")
+	private WebElement err_msg;
+
+	public WebElement geterr_msg() {
+		return err_msg;
+
+	}
+
+	public String get_err_text() {
+		return err_msg.getText();
+	}
 
 	public WebElement getsignuplink() {
 		return signinlink;
