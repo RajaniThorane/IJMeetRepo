@@ -14,14 +14,20 @@ import org.testng.annotations.DataProvider;
 public class ReadExcelFile {
 	private static final Logger LOG = Logger.getLogger(ReadExcelFile.class);
 
-	@DataProvider(name = "LoginData")
-	public static Object[][] excelReader() {
+	/*@DataProvider(name = "LoginData")
+	public Object[][]  getExcelSheetName() {
+		Object[][] data=excelReader("teststeps");
+		return data;
+	}*/
+	
+	
+	public static Object[][] excelReader(String filePath,String sheetName) {
 		Object[][] obj = null ;
 		String path = System.getProperty("user.dir");
 		FileInputStream fs = null ;
 		try {
 			//fs= new FileInputStream("TestData\\amazonTestData.xlsx");
-			fs = new FileInputStream(path+"\\src\\main\\resources\\LoginCredential.xlsx");
+			fs = new FileInputStream(path+filePath);
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -34,7 +40,7 @@ public class ReadExcelFile {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		XSSFSheet sheet = book.getSheet("teststeps");
+		XSSFSheet sheet = book.getSheet(sheetName);
 		int lastrow = sheet.getLastRowNum();
 		obj = new Object[lastrow][2];
 		for (int i = 1; i <= lastrow; i++) {

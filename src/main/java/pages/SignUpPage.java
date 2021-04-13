@@ -14,10 +14,14 @@ public class SignUpPage {
 	private WebElement email;
 	private WebElement contact;
 	private WebElement password;
-	@FindBy(xpath = "//div[@class='recaptcha-checkbox-border']")
-	private WebElement captcha;
+	// @FindBy(xpath = "//div[@class='recaptcha-checkbox-border']")
+	// private WebElement captcha;
 	@FindBy(xpath = "//button[text()=' Sign Up ']")
 	private WebElement signupBtn;
+
+	public WebElement getPassword() {
+		return password;
+	}
 
 	public SignUpPage() {
 		PageFactory.initElements(Constants.driver, this);
@@ -51,9 +55,9 @@ public class SignUpPage {
 		password.sendKeys("Swati@1234");
 	}
 
-	public void selectCaptcha() {
-		captcha.click();
-	}
+	/*
+	 * public void selectCaptcha() { captcha.click(); }
+	 */
 
 	public void clickOnSignUpBtn() {
 		signupBtn.click();

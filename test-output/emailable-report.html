@@ -8,50 +8,23 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">58,266</td><td></td><td></td></tr>
+<tr><th colspan="7">Failed suite [Suite]</th></tr>
+<tr><td><a href="#t0">Test(failed)</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">6,115</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testcases.SceduleMeetingTest</td><td><a href="#m0">verifySceduleMeeting</a></td><td rowspan="1">1617727629001</td><td rowspan="1">9295</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testcases.SignInPageTest</td><td><a href="#m1">verifyLogin</a></td><td rowspan="1">1617727653024</td><td rowspan="1">12920</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Failed suite [Suite]</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test(failed) &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">testcases.SceduleMeetingTest</td><td><a href="#m0">setUp</a></td><td rowspan="1">1618232713100</td><td rowspan="1">6046</td></tr><tr><th colspan="4">Test(failed) &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">testcases.SceduleMeetingTest</td><td><a href="#m1">tearDown</a></td><td rowspan="1">1618232719163</td><td rowspan="1">-1618232719163</td></tr><tr><th colspan="4">Test(failed) &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testcases.SceduleMeetingTest</td><td><a href="#m2">verifySceduleMeeting</a></td><td rowspan="1">1618232719158</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">testcases.SceduleMeetingTest#verifySceduleMeeting</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ClassCastException: com.sun.proxy.$Proxy9 cannot be cast to org.openqa.selenium.By
-	at utilities.WaitFor.elementLocate(WaitFor.java:20)
-	at testcases.SceduleMeetingTest.verifySceduleMeeting(SceduleMeetingTest.java:32)
-	at java.util.ArrayList.forEach(Unknown Source)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testcases.SignInPageTest#verifyLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>thoranere@rknec.edu</td><td>Rajani@1992</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-
-<tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">0</td><td class="num">22,736</td><td></td><td></td></tr>
-</table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">testcases.SceduleMeetingTest</td><td><a href="#m0">setUp</a></td><td rowspan="1">1617716350409</td><td rowspan="1">6093</td></tr><tr class="failedodd"><td rowspan="1">testcases.SignInPageTest</td><td><a href="#m1">setUp</a></td><td rowspan="1">1617716364476</td><td rowspan="1">8637</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">testcases.SceduleMeetingTest</td><td><a href="#m2">tearDown</a></td><td rowspan="1">1617716356519</td><td rowspan="1">-1617716356519</td></tr><tr class="skippedodd"><td rowspan="1">testcases.SignInPageTest</td><td><a href="#m3">tearDown</a></td><td rowspan="1">1617716373126</td><td rowspan="1">-1617716373126</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testcases.SceduleMeetingTest</td><td><a href="#m4">verifySceduleMeeting</a></td><td rowspan="1">1617716356515</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">testcases.SignInPageTest</td><td><a href="#m5">verifyLogin</a></td><td rowspan="1">1617716373114</td><td rowspan="1">0</td></tr></tbody>
-</table>
-<h2>Test</h2><h3 id="m0">testcases.SceduleMeetingTest#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">customeexceptions.InvalidEnvironementException null
+<h2>Test(failed)</h2><h3 id="m0">testcases.SceduleMeetingTest#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">customeexceptions.InvalidEnvironementException null
 	at utilities.Config_properties.getUrl(Config_properties.java:36)
 	at keywords.UIKeywords.lunchURL(UIKeywords.java:56)
-	at basesetup.BaseClass.setUp(BaseClass.java:21)
+	at basesetup.BaseClass.setUp(BaseClass.java:18)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
 ... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testcases.SignInPageTest#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">customeexceptions.InvalidEnvironementException null
+<h3 id="m1">testcases.SceduleMeetingTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testcases.SceduleMeetingTest#verifySceduleMeeting</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">customeexceptions.InvalidEnvironementException null
 	at utilities.Config_properties.getUrl(Config_properties.java:36)
 	at keywords.UIKeywords.lunchURL(UIKeywords.java:56)
-	at basesetup.BaseClass.setUp(BaseClass.java:21)
+	at basesetup.BaseClass.setUp(BaseClass.java:18)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
 ... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testcases.SceduleMeetingTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testcases.SignInPageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testcases.SceduleMeetingTest#verifySceduleMeeting</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">customeexceptions.InvalidEnvironementException null
-	at utilities.Config_properties.getUrl(Config_properties.java:36)
-	at keywords.UIKeywords.lunchURL(UIKeywords.java:56)
-	at basesetup.BaseClass.setUp(BaseClass.java:21)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testcases.SignInPageTest#verifyLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">customeexceptions.InvalidEnvironementException null
-	at utilities.Config_properties.getUrl(Config_properties.java:36)
-	at keywords.UIKeywords.lunchURL(UIKeywords.java:56)
-	at basesetup.BaseClass.setUp(BaseClass.java:21)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-
 </body>
 </html>
