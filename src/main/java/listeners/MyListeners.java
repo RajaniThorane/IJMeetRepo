@@ -15,7 +15,11 @@ import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategy;
 import utilities.Constants;
 
-public class MyListeners implements ITestListener {
+public abstract class MyListeners implements ITestListener {
+
+public abstract void onTestStart(ITestResult result);
+	
+	
 
 	@Override
 	public void onTestFailure(ITestResult result) {

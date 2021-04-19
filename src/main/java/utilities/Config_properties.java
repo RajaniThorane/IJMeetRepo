@@ -64,4 +64,16 @@ public class Config_properties {
 		return curr_Url;
 
 	}
+	public String getJoinMeetCurrentUrl() {
+		String jmeetCurr_Url = null;
+		try {
+			jmeetCurr_Url = prop.getproperty("jmeet.url");
+			LOG.info("getting jmeet Actual current url as: " + jmeetCurr_Url);
+		} catch (Exception e) {
+			LOG.error("Unable to get current url from property file");
+			throw new UnableToGetCurrentUrl();
+		}
+		return jmeetCurr_Url;
+
+	}
 }

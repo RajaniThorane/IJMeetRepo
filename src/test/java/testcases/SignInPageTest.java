@@ -25,9 +25,9 @@ public class SignInPageTest extends BaseClass {
 		WaitFor.elementToBeVisibile(signin.getsignuplink(), 30);
 		signin.clickOnsignUpLink();
 		LOG.info("Entering EmailId ");
-		signin.enterEmail("jangamashwini04@gmail.com");
+		signin.enterEmail("thoranere@rknec.edu");
 		LOG.info("Entering Password");
-		signin.enterPassword("Ashwini@123");
+		signin.enterPassword("Rajani@1992");
 		LOG.info("Click on Signinbutton");
 		signin.clickOnSignUpBtn();
 		WaitFor.elementToBeVisibile(signin.getConfirmationMessage(), 30);

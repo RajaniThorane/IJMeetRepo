@@ -28,7 +28,8 @@ public class SignUpPageTest extends BaseClass {
 		LOG.info("Entering contact");
 		signUp.enterPassword();
 		LOG.info("entering password");
-		signUp.selectCaptcha();
+		WaitFor.elementToBeVisibile(signUp.getPassword(), 80);
+		//signUp.selectCaptcha();
 		LOG.info("selecting captcha");
 		signUp.clickOnSignUpBtn();
 		LOG.info("clicking on signup button");

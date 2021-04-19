@@ -3,27 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.SceduleMeetingTest">
-        <methods>
-          <include name="verifySceduleMeeting"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testcases.SceduleMeetingTest -->
-      <class name="testcases.SignInPageTest">
-        <methods>
-          <include name="verifyLogin"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testcases.SignInPageTest -->
-      <class name="testcases1.SignInPageTest">
+      <class name="testcases.ConferenceCallPageTest">
         <methods>
           <include name="setUp"/>
+          <include name="verifyConferenceCall"/>
           <include name="tearDown"/>
-          <include name="verifyLogin"/>
         </methods>
-      </class> <!-- testcases1.SignInPageTest -->
+      </class> <!-- testcases.ConferenceCallPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
