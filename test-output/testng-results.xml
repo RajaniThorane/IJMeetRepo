@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="62710" started-at="2021-04-17T16:08:53 IST" finished-at="2021-04-17T16:09:56 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="62710" started-at="2021-04-17T16:08:53 IST" finished-at="2021-04-17T16:09:56 IST">
+      <class name="testcases.SceduleMeetingTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.SceduleMeetingTest@12fc6eb]" name="setUp" is-config="true" duration-ms="22981" started-at="2021-04-17T16:08:53 IST" finished-at="2021-04-17T16:09:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifySceduleMeeting()[pri:0, instance:testcases.SceduleMeetingTest@12fc6eb]" name="verifySceduleMeeting" duration-ms="38086" started-at="2021-04-17T16:09:16 IST" finished-at="2021-04-17T16:09:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySceduleMeeting -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testcases.SceduleMeetingTest@12fc6eb]" name="tearDown" is-config="true" duration-ms="1523" started-at="2021-04-17T16:09:54 IST" finished-at="2021-04-17T16:09:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.SceduleMeetingTest -->
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>

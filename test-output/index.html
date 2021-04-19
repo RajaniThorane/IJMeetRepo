@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -23,8 +24,9 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,6 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
+              <span class="suite-name border-passed">Default suite</span>
               <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
@@ -49,6 +52,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
+                    <span>C:\Users\Acer User\AppData\Local\Temp\testng-eclipse-250814057\testng-customsuite.xml</span>
                     <span>C:\Users\Laptop\AppData\Local\Temp\testng-eclipse--958651230\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,6 +95,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testcases.SceduleMeetingTest" hash-for-method="verifySceduleMeeting">verifySceduleMeeting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                     <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
@@ -117,6 +136,10 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.SceduleMeetingTest</span>
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
@@ -125,6 +148,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="verifySceduleMeeting">
+                  </a> <!-- verifySceduleMeeting -->
+                  <span class="method-name">verifySceduleMeeting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\Acer User\AppData\Local\Temp\testng-eclipse-250814057\testng-customsuite.xml</span>
                   <a name="verifyConferenceCall">
                   </a> <!-- verifyConferenceCall -->
                   <span class="method-name">verifyConferenceCall</span>
@@ -208,6 +242,7 @@ Session ID: d0faa730ede3eaf36a74232d44428e5d
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;testcases.SceduleMeetingTest&quot;/&gt;
       &lt;class name=&quot;testcases.ConferenceCallPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
@@ -250,6 +285,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifySceduleMeeting')
+data.setCell(0, 2, 'testcases.SceduleMeetingTest')
+data.setCell(0, 3, 38086);
 data.setCell(0, 1, 'verifyConferenceCall')
 data.setCell(0, 2, 'testcases.ConferenceCallPageTest')
 data.setCell(0, 3, 35242);
@@ -257,6 +295,7 @@ window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-
 return data;
 }
               </script>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <span class="suite-total-time">Total running time: 35 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
@@ -289,6 +328,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <span class="method-name">verifySceduleMeeting</span>
+                <span class="method-start">22983 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">61077 ms</span>
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyConferenceCall</span>
@@ -303,4 +348,5 @@ return data;
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

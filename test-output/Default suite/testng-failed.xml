@@ -9,6 +9,7 @@
           <include name="verifyConferenceCall"/>
           <include name="tearDown"/>
         </methods>
+      </class> <!-- testcases.SceduleMeetingTest -->
       </class> <!-- testcases.ConferenceCallPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
