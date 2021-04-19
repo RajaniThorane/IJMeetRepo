@@ -23,6 +23,12 @@ public class JoinMettingPage {
 	private WebElement emptyMeeting_Id;
 	@FindBy(css = "a>div[class='watermark leftwatermark']")
 	private WebElement jmeettitle;
+	@FindBy(css = "a.back-arrow")
+	private WebElement backArrowLink;
+
+	public void clickOnBackArrowLink() {
+		key.click(backArrowLink);
+	}
 
 	public String confirmationMsgForJmeet() {
 		return jmeettitle.getText();

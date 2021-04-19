@@ -16,6 +16,22 @@ import utilities.WaitFor;
 public class JoinMeetingPageTest extends BaseClass {
 	private static final Logger LOG = Logger.getLogger(JoinMeetingPageTest.class);
 
+	// @Test
+	public void verifyjoinMeet() throws InterruptedException {
+		JoinMettingPage joinmeet = new JoinMettingPage();
+		SignInPageTest signtest = new SignInPageTest();
+		signtest.verifyLogin();
+		joinmeet.clickOnJoinMeetlink();
+		LOG.info("clicking on join meet link and getting text as:" + joinmeet.getJoinMeetTxt());
+		joinmeet.enterUsername("Rajani");
+		LOG.info("Entering username");
+		joinmeet.enetrMeetingId("8bf1067");
+		LOG.info("Entering meeting id");
+		joinmeet.clickOnJoinMeetingBtn();
+		//Thread.sleep(4000);
+		LOG.info("click on join meeting button");
+	}
+
 	@Test(dataProvider = "jmeetData", dataProviderClass = Dataproviders.class)
 	public void verifyjoinMeeting(String user_name, String meeting_Id) throws InterruptedException {
 		UIKeywords k = new UIKeywords();
@@ -26,6 +42,12 @@ public class JoinMeetingPageTest extends BaseClass {
 		// WaitFor.elementToBeVisibile(s.getConfirmationMessage(), 30);
 		jmeet.clickOnJoinMeetlink();
 		LOG.info("clicking on join meet link and getting text as:" + jmeet.getJoinMeetTxt());
+		/*
+		 * jmeet.clickOnBackArrowLink(); LOG.info("clicking on back button link");
+		 * Thread.sleep(2000); jmeet.clickOnJoinMeetlink();
+		 * LOG.info("clicking on join meet link and getting text as:" +
+		 * jmeet.getJoinMeetTxt());
+		 */
 		jmeet.enterUsername(user_name);
 		LOG.info("enetring username");
 		jmeet.enetrMeetingId(meeting_Id);
