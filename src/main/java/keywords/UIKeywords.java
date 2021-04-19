@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
@@ -29,8 +30,10 @@ public class UIKeywords {
 		String browserName = con.getBrowserName();
 		switch (browserName) {
 		case "chrome":
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("use-fake-ui-for-media-stream");
 			WebDriverManager.chromedriver().setup();
-			Constants.driver = new ChromeDriver();
+			Constants.driver = new ChromeDriver(options);
 			LOG.info("ChromeBrowser Lunching Successfully. ");
 			break;
 		case "firefox":
@@ -102,21 +105,35 @@ public class UIKeywords {
 		element.click();
 	}
 
-
 	public void doSendKeys(WebElement element, String key) {
 		element.sendKeys(key);
 	}
 
+	}
 
 	public String verifyExpectedCurrentUrl() {
 		return con.getActualCurrentUrl();
-		
+
 	}
 
 	public String gettingCurrentUrl() {
 		return Constants.driver.getCurrentUrl();
+	}
+
+	public String getActualJmeetingCurrentUrl() {
+		return con.getJoinMeetCurrentUrl();
 
 	}
+
+	public String getExpectedJmeetingCurrentUrl() {
+		return Constants.driver.getCurrentUrl();
+	}
+
+	public void switchtoIframe(int index) {
+		Constants.driver.switchTo().frame(index);
+
+	}
+
    public void selectValueFromDropdown(WebElement element ,String value) {
 	Constants.objselect = new Select(element);
 	Constants.objselect.selectByVisibleText(value);

@@ -8,6 +8,12 @@
 		 <!--  <classes>
 			<class name="testcases.ScheduleMeetingTest"></class>
 		</classes> -->
+		<!-- <packages> <package name="testcases"></package> </packages> -->
+		<classes>
+			<!-- <class name="testcases.JoinMeetingPageTest"></class> -->
+			<class name="testcases.ConferenceCallPageTest"></class>
+			<!-- <class name="testcases.SignInPageTest"></class> -->
+		</classes>
 	</test> <!-- Test -->
 	<!-- <listeners> <listener class-name="listeners.MyListeners"></listener> 
 		</listeners> -->
