@@ -1,6 +1,9 @@
 package keywords;
 
 import java.time.LocalTime;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
@@ -11,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.Config_properties;
@@ -101,6 +105,7 @@ public class UIKeywords {
 
 	public void doSendKeys(WebElement element, String key) {
 		element.sendKeys(key);
+	}
 
 
 	public String verifyExpectedCurrentUrl() {
@@ -112,4 +117,13 @@ public class UIKeywords {
 		return Constants.driver.getCurrentUrl();
 
 	}
+   public void selectValueFromDropdown(WebElement element ,String value) {
+	Constants.objselect = new Select(element);
+	Constants.objselect.selectByVisibleText(value);
+   	}
+   public void selectValueFromDropdown(WebElement element , int index) {
+	   Constants.objselect = new Select(element);
+		Constants.objselect.selectByIndex(index);
+   }
+  
 }

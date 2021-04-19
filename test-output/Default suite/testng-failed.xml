@@ -10,20 +10,6 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- testcases.SceduleMeetingTest -->
-      <class name="testcases.SignInPageTest">
-        <methods>
-          <include name="verifyLogin"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testcases.SignInPageTest -->
-      <class name="testcases1.SignInPageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="verifyLogin"/>
-        </methods>
-      </class> <!-- testcases1.SignInPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
