@@ -28,7 +28,6 @@ public class SceduleMeetingPage {
 	private WebElement topicTxt;
 	@FindBy(id = "edit_description_1")
 	private WebElement description;
-	@FindBy(css="input[class='multiple_emails-input text-left']")
 	@FindBy(css = "input[class='multiple_emails-input text-left']")
 	private WebElement inviteUserTxt;
 	@FindBy(id = "edit_start_end_date")
@@ -38,41 +37,29 @@ public class SceduleMeetingPage {
 	@FindBy(css = "div[class='drp-calendar left single'] select[class='yearselect']")
 	private WebElement whenYearDropdown;
 	@FindBy(how = How.XPATH, using = "//div[@class='drp-calendar left single']//tbody[1] //td[class=contains(text(),'available')]")
-    private List<WebElement> whenDay;
-	
-	@FindBy (css="input#m_schedule_time_n")
-	private WebElement timepicker ;
-	
-	@FindBy(css="select#edit_hour")
+	private List<WebElement> whenDay;
+
+	@FindBy(css = "input#m_schedule_time_n")
+	private WebElement timepicker;
+
+	@FindBy(css = "select#edit_hour")
 	private WebElement meetingHours;
-	
-	@FindBy(css="select#edit_minute")
+
+	@FindBy(css = "select#edit_minute")
 	private WebElement meetingMinute;
-	
-	@FindBy(css="select#edit_timezone")
+
+	@FindBy(css = "select#edit_timezone")
 	private WebElement timezone;
-	
-	@FindBy(css="select#email_template_language")
-	private WebElement language ; 
-	
-	@FindBy(css = "div[class='drp-calendar left single'] table[class='table-condensed']")
-	private WebElement whenDay;
-	@FindBy(how = How.XPATH, using = "//div[@class='drp-calendar left single']//tbody[1] //td[class=contains(text(),'available')]")
-	private List<WebElement> webelements;
 
-	public void readElements() {
-		Iterator<WebElement> itr = webelements.iterator();
-		String s = null;
-		while (itr.hasNext()) {
-			s = itr.next().getText();
-		}
-	}
-	/*
-	 * ArrayList a = new ArrayList<>(); a.addAll(webelements); return a; // TODO
-	 * Auto-generated method stub
-	 */
+	@FindBy(css = "select#email_template_language")
+	private WebElement language;
 
-    
+	@FindBy(css = "#req_meeting_password")
+	private WebElement passcode;
+
+	@FindBy(css = "#edit_meeting_password")
+	private WebElement passcodetxt;
+
 	public SceduleMeetingPage() {
 		PageFactory.initElements(Constants.driver, this);
 	}
@@ -92,22 +79,28 @@ public class SceduleMeetingPage {
 	public WebElement getInviteUserTxt() {
 		return inviteUserTxt;
 	}
-	
+
+	/*
+	 * public void clickOnWhendateTextBox() { keyword.click(whenDateTxt); }
+	 */
 	public void clickOnWhendateTextBox() {
 		keyword.click(whenDateTxt);
 	}
+
 	public void selectMonth(String month) {
-		keyword.selectValueFromDropdown(whenMonthdropdown, month );
+		keyword.selectValueFromDropdown(whenMonthdropdown, month);
 	}
+
 	public void selectMonth(int month) {
-		keyword.selectValueFromDropdown(whenMonthdropdown, month );
+		keyword.selectValueFromDropdown(whenMonthdropdown, month);
 	}
-	
+
 	public void selectYear(String year) {
-		keyword.selectValueFromDropdown(whenYearDropdown, year );
+		keyword.selectValueFromDropdown(whenYearDropdown, year);
 	}
+
 	public void selectYear(int year) {
-		keyword.selectValueFromDropdown(whenYearDropdown, year );
+		keyword.selectValueFromDropdown(whenYearDropdown, year);
 	}
 
 	public void selectDay(String date) {
@@ -120,31 +113,35 @@ public class SceduleMeetingPage {
 		}
 
 	}
-	
+
 	public void enterTime(String time) {
 		timepicker.clear();
 		keyword.doSendKeys(timepicker, time);
 	}
-	
+
 	public void selectMeetingHours(String hours) {
-	 keyword.selectValueFromDropdown(meetingHours, hours);
+		keyword.selectValueFromDropdown(meetingHours, hours);
 	}
+
 	public void selectMeetingMinute(String minute) {
 		keyword.selectValueFromDropdown(meetingMinute, minute);
 	}
-	
+
 	public void selectTimeZone(String zone) {
-	  keyword.selectValueFromDropdown(timezone, zone);
+		keyword.selectValueFromDropdown(timezone, zone);
 	}
-	
+
 	public void selectLanguage(String lang) {
 		keyword.selectValueFromDropdown(language, lang);
 	}
 
-	public void clickOnWhendateTextBox() {
-		keyword.click(whenDateTxt);
+	public void ClickOnPasscodeCheckBox() {
+		keyword.click(passcode);
 	}
 
+	public void enterPasscode(String passcodeValue) {
+		keyword.doSendKeys(passcodetxt,passcodeValue );
+	}
 	public WebElement getScheduleMeeting() {
 		return scheduleMeeting;
 
