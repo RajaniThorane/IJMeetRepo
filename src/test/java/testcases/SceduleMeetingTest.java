@@ -55,13 +55,16 @@ public class SceduleMeetingTest extends BaseClass {
     LOG.info("Selecting time zone ");
     schedulepage.selectLanguage("English");
     LOG.info("Selcting  language");
+    schedulepage.ClickOnPasscodeCheckBox();
+    schedulepage.enterPasscode("Ashwini");
     Thread.sleep(5000);
+
     
     
     
-		SignInPageTest signtest = new SignInPageTest();
-		SceduleMeetingPage schedulepage = new SceduleMeetingPage();
-		signtest.verifyLogin();
+		/*SignInPageTest signtest = new SignInPageTest();
+		SceduleMeetingPage schedulepage = new SceduleMeetingPage();*/
+		/*signtest.verifyLogin();
 		schedulepage.clickOnScheduleMeeting();
 		LOG.info("Click On Schedule Meeting : ");
 		LOG.info("Tab Name is : " + schedulepage.getTextOfTabName());
@@ -77,7 +80,7 @@ public class SceduleMeetingTest extends BaseClass {
 		schedulepage.clickOnWhendateTextBox();
 		LOG.info("Click on date TextBox");
 		//LOG.info(schedulepage.readElements());
-
+*/
 	}
 
 }
